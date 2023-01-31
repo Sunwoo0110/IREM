@@ -1,1 +1,30 @@
-
+name: "Setup Node.js Express and MySQL"
+author: "<Sunwoo0110@gmail.com> && <jihooni0914@gmail.com>"
+description: "A GitHub Action to setup node.js express and MySQL"
+inputs:
+   MYSQL_HOST:
+      description: "MySQL host"
+      required: true
+      default: ''
+   MYSQL_USER:
+      description: "MySQL user"
+      required: true
+      default: ''
+   MYSQL_HOST:
+      description: "MySQL host"
+      required: true
+      default: ''
+   MYSQL_HOST:
+      description: "MySQL host"
+      required: true
+      default: ''
+runs:
+   using: "docker"
+   image: "Dockerfile"
+   args:
+      - ${{ inputs. }}
+      - ${{ inputs. }}
+      - ${{ inputs. }}
+branding:
+   icon: "navigation"
+   color: "blue"
