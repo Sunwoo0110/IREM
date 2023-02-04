@@ -1,16 +1,16 @@
 name: "Setup Node.js Express and MySQL"
 author: "<Sunwoo0110@gmail.com> && <jihooni0914@gmail.com>"
-description: "A GitHub Action to setup node.js express and MySQL"
+description: "A GitHub Action to setup Node.js Express and MySQL"
 inputs:
-   project-name: 
+   github-user-id: 
       description: "project name"
       required: true
       default: ''
-   project-description:
-      description: "project description"
+   github-user-password: 
+      description: "project name"
       required: true
       default: ''
-   repo-url:
+   github-repo-url:
       description: "project github repogitory url"
       required: true
       default: ''
@@ -18,9 +18,9 @@ runs:
    using: "docker"
    image: "Dockerfile"
    args:
-      - ${{ inputs.project-name }}
-      - ${{ inputs.project-description }}
-      - ${{ inputs.repo-url }}
+      - ${{ inputs.github-user-id }}
+      - ${{ inputs.github-user-password }}
+      - ${{ inputs.github-repo-url }}
 branding:
    icon: "navigation"
    color: "blue"
