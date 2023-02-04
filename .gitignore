@@ -1,0 +1,7 @@
+
+## for shell file test
+package.json
+node_modules
+package-lock.json
+.env
+/src
