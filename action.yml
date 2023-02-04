@@ -21,6 +21,7 @@ runs:
       - ${{ inputs.github-user-id }}
       - ${{ inputs.github-user-password }}
       - ${{ inputs.github-repo-url }}
+      - ${{ secrets.GITHUB-TOKEN }}
 branding:
    icon: "navigation"
    color: "blue"
