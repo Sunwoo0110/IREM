@@ -24,6 +24,6 @@ git config --global user.password "\$4"
 
 git add .
 git commit -m "init"
-git push
+# git push
 # npm install
 # npm start
