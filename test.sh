@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/jihooni0914/my-first-repo.git
-ls
-cd my-first-repo
-ls
+
+echo $1
+echo $2
+echo $3
