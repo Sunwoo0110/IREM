@@ -1,3 +1,5 @@
+name: Git clone test
+
 on: [workflow_dispatch]
 
 jobs:
