@@ -18,6 +18,9 @@ ls
 
 npm install
 
+git config --global user.name "\$2"
+git config --global user.password "\$3"
+
 git add .
 git commit -m "init"
 git push
