@@ -25,6 +25,8 @@ git config --global user.email
 git config --global user.password $4
 git config --global user.password
 
+git remote set-url origin git@github.com:$2/$repo_name.git
+
 git add .
 git commit -m "init"
 git push -u origin main
