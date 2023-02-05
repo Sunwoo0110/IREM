@@ -1,6 +1,6 @@
 name: Git clone test
 
-on: [workflow_dispatch]
+on: [push]
 
 jobs:
    git_clone_test:
