@@ -20,6 +20,7 @@ runs:
    args:
       - ${{ inputs.github-repo-url }}
       - ${{ inputs.github-user-id }}
+      - ${{ inputs.github-user-email }}
       - ${{ inputs.github-user-password }}
       # - ${{ secrets.GITHUB-TOKEN }}
 branding:
