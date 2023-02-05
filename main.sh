@@ -16,10 +16,11 @@ ls
 ../make_config.sh
 ../make_routes.sh
 
-npm install
+# npm install
 
 git config --global user.name "\$2"
-git config --global user.password "\$3"
+git config --global user.email "\$3"
+git config --global user.password "\$4"
 
 git add .
 git commit -m "init"
