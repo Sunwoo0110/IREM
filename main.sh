@@ -9,12 +9,12 @@ git clone $repo_url
 
 chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_config.sh make_routes.sh
 cd $repo_name
-ls
 ../make_package_dot_json.sh $repo_name $repo_url
 ../make_src_directory.sh
 ../make_appserver.sh
 ../make_config.sh
 ../make_routes.sh
+ls
 
 # npm install
 
