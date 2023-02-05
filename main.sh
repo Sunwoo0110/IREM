@@ -19,7 +19,9 @@ ls
 # npm install
 
 git config --global user.name "\$2"
+git config --global user.name 
 git config --global user.email "\$3"
+git config --global user.email
 git config --global user.password "\$4"
 
 git add .

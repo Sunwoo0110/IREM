@@ -2,6 +2,10 @@ name: "Setup Node.js Express and MySQL"
 author: "<Sunwoo0110@gmail.com> && <jihooni0914@gmail.com>"
 description: "A GitHub Action to setup Node.js Express and MySQL"
 inputs:
+   github-repo-url:
+      description: "project github repository url"
+      required: true
+      default: ''
    github-user-id: 
       description: "user id"
       required: true
@@ -12,10 +16,6 @@ inputs:
       default: ''
    github-user-password: 
       description: "user password"
-      required: true
-      default: ''
-   github-repo-url:
-      description: "project github repository url"
       required: true
       default: ''
 runs:
