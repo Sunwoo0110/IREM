@@ -15,7 +15,7 @@ jobs:
               github-user-id: "jihooni0914"
               github-user-email: "jihooni0914@gmail.com"
               github-user-password: "1234"
-              GH_TOKEN: "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"
+              GH_TOKEN: "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"
            uses: ./ 
            
          - name: Test finish
