@@ -5,4 +5,4 @@ COPY . .
 RUN apt-get update && \
     apt-get install -y git
 
-ENTRYPOINT [ "./main.sh" ]
+ENTRYPOINT [ "--no-cache", "./main.sh" ]
