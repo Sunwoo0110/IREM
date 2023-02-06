@@ -16,6 +16,7 @@ jobs:
               github-user-email: "jihooni0914@gmail.com"
               github-user-password: "1234"
               GH_TOKEN: "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"
+              # GH_TOKEN: ${{ secrets.GH_TOKEN }}
            uses: ./ 
            
          - name: Test finish
