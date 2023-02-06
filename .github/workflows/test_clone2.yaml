@@ -1,0 +1,23 @@
+name: Git clone test-0206-2
+
+on: [push]
+
+jobs:
+  git_clone_test:
+    runs-on: ubuntu-latest
+    name: Git clone test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      # - name: node setup
+      #   uses: actions/setup-node@v3
+      - name: Setup
+        with:
+          github-repo-url: "https://github.com/jihooni0914/my-first-repo.git"
+          github-user-id: "jihooni0914"
+          github-user-email: "jihooni0914@gmail.com"
+          github-user-password: "1234"
+          GH_TOKEN: "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"
+        uses: ./ 
+      - name: Test finish
+        run: echo "test was good"
