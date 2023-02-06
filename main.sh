@@ -31,8 +31,6 @@ git config --global user.email
 
 git add .
 git commit -m "init"
-git push
-$2
-$5
-# git push -u origin main
+# git push
+git push -u origin main
 # git push https://$5@github.com/$2/$repo_name.git
