@@ -30,7 +30,7 @@ runs:
       - ${{ inputs.github-user-id }}
       - ${{ inputs.github-user-email }}
       - ${{ inputs.github-user-password }}
-      - ${{ inputs.GH_TOKEN }}
+      # - ${{ inputs.GH_TOKEN }}
       # - ${{ secrets.GITHUB-TOKEN }}
 branding:
    icon: "navigation"
