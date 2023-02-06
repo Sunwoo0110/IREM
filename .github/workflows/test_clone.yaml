@@ -3,7 +3,7 @@ name: Git clone test
 on: [push]
 
 jobs:
-   git_clone_test:
+  git_clone_test:
     runs-on: ubuntu-latest
     name: Git clone test
     steps:
