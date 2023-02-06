@@ -8,6 +8,7 @@ echo "repo url: $repo_url"
 
 # git clone https://$5@github.com/$2/$repo_name
 # git clone $repo_url
+git clone git@github.com:$2/$repo_name.git
 
 chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_config.sh make_routes.sh
 cd $repo_name
@@ -19,7 +20,6 @@ cd $repo_name
 
 # npm install
 
-git clone git@github.com:$2/$repo_name.git
 git config --global user.name $2
 git config --global user.name 
 git config --global user.email $3
