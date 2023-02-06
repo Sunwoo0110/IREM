@@ -6,8 +6,8 @@ repo_name=`echo \$repo_name | cut -d '.' -f1`
 echo "$repo_name"
 
 echo "?"
-git clone https://$5@github.com/$2/$repo_name
-# git clone $repo_url
+# git clone https://$5@github.com/$2/$repo_name
+git clone $repo_url
 
 chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_config.sh make_routes.sh
 cd $repo_name
