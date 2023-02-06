@@ -17,5 +17,6 @@ jobs:
               github-user-password: "1234"
               GH_TOKEN: "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"
            uses: ./ 
+           
          - name: Test finish
            run: echo "test was good"
