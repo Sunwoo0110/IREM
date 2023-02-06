@@ -1,4 +1,4 @@
-name: Git clone test
+name: Git clone test-0206
 
 on: [push]
 
