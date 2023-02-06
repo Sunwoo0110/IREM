@@ -1,9 +1,9 @@
-FROM ubuntu:18.04
+FROM ubuntu:latest
 
-COPY . .
+COPY ./main.sh /
 
 RUN apt-get update && \
     apt-get install -y git && \
     rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT [ "./main.sh" ]
+ENTRYPOINT [ "/main.sh" ]

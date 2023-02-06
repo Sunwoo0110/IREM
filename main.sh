@@ -5,7 +5,6 @@ repo_name=`echo \$repo_url | cut -d '/' -f5`
 repo_name=`echo \$repo_name | cut -d '.' -f1`
 echo "$repo_name"
 
-echo "?"
 # git clone https://$5@github.com/$2/$repo_name
 git clone $repo_url
 
