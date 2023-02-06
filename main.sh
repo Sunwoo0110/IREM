@@ -24,8 +24,8 @@ git config --global user.name $2
 git config --global user.name 
 git config --global user.email $3
 git config --global user.email
-# git config --global user.password $4
-# git config --global user.password
+git config --global user.password $5
+git config --global user.password
 
 # git remote set-url origin git@github.com:$2/$repo_name.git
 
