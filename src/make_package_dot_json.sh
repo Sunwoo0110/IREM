@@ -1,11 +1,11 @@
 #!/bin/bash
 
 ## make package.json file
-ls
-cd ..
-ls
-cd $1
-FILE=package.json
+# ls
+# cd ..
+# ls
+# cd workspace/$1
+FILE=../workspace/$1/package.json
 script=$(cat <<EOF
 {
     "name": "\$1",
