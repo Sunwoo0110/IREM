@@ -64,7 +64,7 @@ touch $APP
 echo "$app_script" >> $APP
 
 ## make server.js
-SERVER=src/server.js
+SERVER=../workspace/$1/src/server.js
 server_script=$(cat <<EOF
 const app = require("./app.js");
 const port = 3000;
