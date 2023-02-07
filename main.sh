@@ -8,13 +8,15 @@ echo "$repo_name"
 git clone https://$2:$3@github.com/$2/$repo_name.git
 
 cd src
-chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_config.sh make_routes.sh
+chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_config.sh make_routes.sh make_env_sample.sh make_gitignore.sh
 cd ../$repo_name
 ../src/make_package_dot_json.sh $repo_name $repo_url
 ../src/make_src_directory.sh
 ../src/make_appserver.sh
 ../src/make_config.sh
 ../src/make_routes.sh
+../src/make_env_sample.sh
+../src/make_gitignore.sh
 ls
 
 git config --global user.name $2
