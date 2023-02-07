@@ -17,5 +17,5 @@ COPY . .
 
 RUN ls
 
-# ENTRYPOINT [ "/entrypoint.sh" ]
-ENTRYPOINT [ "./main.sh" ]
+ENTRYPOINT [ "/entrypoint.sh" ]
+# ENTRYPOINT [ "./main.sh" ]
