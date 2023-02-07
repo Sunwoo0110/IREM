@@ -14,7 +14,7 @@ inputs:
       description: "user email"
       required: true
       default: ''
-   gh-token: 
+   github-token: 
       description: "user PAT"
       required: true
       default: ''
@@ -25,7 +25,7 @@ runs:
       - ${{ inputs.github-repo-url }}
       - ${{ inputs.github-user-id }}
       - ${{ inputs.github-user-email }}
-      - ${{ inputs.gh-token }}
+      - ${{ inputs.github-token }}
 branding:
    icon: "navigation"
    color: "blue"
