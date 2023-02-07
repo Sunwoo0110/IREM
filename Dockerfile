@@ -13,4 +13,6 @@ COPY src/make_package_dot_json.sh /make_package_dot_json.sh
 COPY src/make_routes.sh /make_routes.sh
 COPY src/make_src_directory.sh /make_src_directory.sh
 
+RUN ls
+
 ENTRYPOINT [ "/entrypoint.sh" ]
