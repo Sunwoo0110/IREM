@@ -2,7 +2,7 @@
 
 ## make app.js
 cd ..
-cd "\s1"
+cd "\$1"
 APP=src/app.js
 app_script=$(cat <<EOF
 const express = require("express");
