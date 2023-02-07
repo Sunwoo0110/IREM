@@ -1,7 +1,9 @@
 #!/bin/bash
 
 ## make app.js
-APP=../$1/src/app.js
+cd ..
+cd "\s1"
+APP=src/app.js
 app_script=$(cat <<EOF
 const express = require("express");
 
