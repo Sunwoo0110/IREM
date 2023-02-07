@@ -15,8 +15,8 @@ jobs:
               github-user-id: "Sunwoo0110"
               github-user-email: "Sunwoo0110@g.skku.edu"
               github-user-password: "1234"
-              GH_TOKEN: "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"
-              # GH_TOKEN: ${{ secrets.GH_TOKEN }}
+              # GH_TOKEN: "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"
+              GH_TOKEN: ${{ secrets.GH_TOKEN }}
            uses: ./ 
            
          - name: Test finish
