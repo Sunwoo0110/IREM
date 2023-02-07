@@ -54,6 +54,23 @@ steps:
 ```
 
 ## File Structure
+```bash
+* 📦 IREM
+  ├──  .github
+  │   ├──  workflows
+  │   │   └──  test_clone_dispatch.yml
+  ├──  src
+  │   ├──  make_appserver.sh
+  │   ├──  make_config.sh
+  │   ├──  make_env_sample.sh
+  │   ├──  make_gitignore.sh
+  │   ├──  make_package_dot_json.sh
+  │   ├──  make_routes.sh
+  │   └──  make_src_directory.sh
+  ├──  Dockerfile
+  ├──  action.yml
+  └──  main.sh
+```
 
 ## License
 The scripts and documentation in this project are released under the [MIT License](LICENSE).
