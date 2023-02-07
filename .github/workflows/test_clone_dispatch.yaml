@@ -1,4 +1,4 @@
-name: Git clone test2
+name: Setup Nodejs Express && MySQL Directory Structure
 
 on:
   workflow_dispatch:
