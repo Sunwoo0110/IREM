@@ -33,6 +33,9 @@ steps:
 ## Usage process example
 예시 보여주기
 
+## Usage Scenario
+
+## File Structure
 
 ## License
 The scripts and documentation in this project are released under the [MIT License](LICENSE).
