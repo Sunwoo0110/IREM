@@ -1,9 +1,8 @@
 #!/bin/bash
 
 ## make src directory
-cd $1
-mkdir -p src
+mkdir -p ../workspace/$1/src
 
 ## make config, routes directory
-mkdir -p src/config
-mkdir -p src/routes
+mkdir -p ../workspace/$1/src/config
+mkdir -p ../workspace/$1/src/routes
