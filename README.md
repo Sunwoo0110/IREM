@@ -19,7 +19,7 @@ steps:
       github-repo-url: ${{ inputs.github-repo-url }}
       github-user-id: ${{ inputs.github-user-id }}
       github-user-email: ${{ inputs.github-user-email }}
-      github-token: ${{ secrets.GITHUB_TOKEN }}
+      github-token: ${{ secrets.GH_TOKEN }}
 ```
 
 ## Inputs (* : required)
