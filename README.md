@@ -45,7 +45,8 @@ steps:
   │   │   └──  config.js
   │   ├──  routes
   │   │   ├──  test
-  │   │   │   └──  test.ctrl.js
+  │   │   │   ├──  test.ctrl.js
+  │   │   │   └──  index.js
   │   │   ├──  db.js
   │   │   └──  index.js
   │   ├──  app.js
