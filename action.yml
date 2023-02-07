@@ -2,25 +2,30 @@ name: "Setup Node.js Express and MySQL"
 author: "<Sunwoo0110@gmail.com> && <jihooni0914@gmail.com>"
 description: "A GitHub Action to setup Node.js Express and MySQL"
 inputs:
-   github-user-id: 
-      description: "project name"
-      required: true
-      default: ''
-   github-user-password: 
-      description: "project name"
-      required: true
-      default: ''
    github-repo-url:
-      description: "project github repogitory url"
+      description: "project github repository url which you want to setup"
+      required: true
+      default: ''
+   github-user-id: 
+      description: "user id"
+      required: true
+      default: ''
+   github-user-email: 
+      description: "user email"
+      required: true
+      default: ''
+   gh-token: 
+      description: "user PAT"
       required: true
       default: ''
 runs:
    using: "docker"
    image: "Dockerfile"
    args:
-      - ${{ inputs.github-user-id }}
-      - ${{ inputs.github-user-password }}
       - ${{ inputs.github-repo-url }}
+      - ${{ inputs.github-user-id }}
+      - ${{ inputs.github-user-email }}
+      - ${{ inputs.gh-token }}
 branding:
    icon: "navigation"
    color: "blue"
