@@ -54,6 +54,15 @@ steps:
   └──  .gitignore
 ```
 
+## Default Dependencies
+```yaml
+body-parser: v1.20.0
+dotenv: v16.0.1
+express: v4.18.1
+mysql2: v2.3.3
+nodemon: v2.0.18
+```
+
 ## File Structure
 ```bash
 * 📦 IREM
