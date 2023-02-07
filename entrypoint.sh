@@ -11,7 +11,6 @@ pwd
 ls
 git clone https://$2:$4@github.com/$2/$repo_name.git
 
-
 cd src
 chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_config.sh make_routes.sh make_env_sample.sh make_gitignore.sh
 cd ..
@@ -23,7 +22,6 @@ src/make_routes.sh $repo_name
 src/make_env_sample.sh $repo_name
 src/make_gitignore.sh $repo_name
 ls
-
 
 cd $repo_name
 git config --global user.name $2
