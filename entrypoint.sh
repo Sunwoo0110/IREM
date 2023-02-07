@@ -9,7 +9,10 @@ ls
 git clone https://$2:$4@github.com/$2/$repo_name.git
 
 ls
+cd usr/bin/docker
+ls
 chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_config.sh make_routes.sh make_env_sample.sh make_gitignore.sh
+cd ..
 cd $repo_name
 ls
 ./make_package_dot_json.sh $repo_name $repo_url
