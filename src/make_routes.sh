@@ -50,7 +50,7 @@ touch $ROUTES
 echo "$routes_script" >> $ROUTES
 
 ## make routes/test directory
-mkdir -p src/routes/test
+mkdir -p $1/src/routes/test
 
 ## make routes/test/test.ctrl.js
 CTRL=$1/src/routes/test/test.ctrl.js
