@@ -1,7 +1,9 @@
 #!/bin/bash
 
 ## make config/config.js
-CONFIG=../$1/src/config/config.js
+cd ..
+cd "\s1"
+CONFIG=src/config/config.js
 config_script=$(cat <<EOF
 require("dotenv").config();
 
