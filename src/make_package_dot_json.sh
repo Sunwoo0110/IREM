@@ -41,4 +41,3 @@ fi
 touch $FILE
 
 echo "$script" >> $FILE
-# echo "$script"
