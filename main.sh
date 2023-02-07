@@ -6,6 +6,13 @@ repo_name=`echo \$repo_name | cut -d '.' -f1`
 echo "repo name: $repo_name"
 echo "repo url: $repo_url"
 
+git config --global user.name $2
+git config --global user.name 
+git config --global user.email $3
+git config --global user.email
+git config --global user.password $5
+git config --global user.password
+
 git clone https://$2:$5@github.com/$2/$repo_name.git
 # git clone $repo_url
 
@@ -16,13 +23,6 @@ cd $repo_name
 ../make_appserver.sh
 ../make_config.sh
 ../make_routes.sh
-
-git config --global user.name $2
-git config --global user.name 
-git config --global user.email $3
-git config --global user.email
-git config --global user.password $5
-git config --global user.password
 
 # git remote set-url origin git@github.com:$2/$repo_name.git
 
