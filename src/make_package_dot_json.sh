@@ -2,7 +2,7 @@
 
 ## make package.json file
 
-FILE=$1/package.json
+FILE=package.json
 script=$(cat <<EOF
 {
     "name": "\$1",
