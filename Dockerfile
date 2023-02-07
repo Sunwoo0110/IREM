@@ -1,6 +1,6 @@
 FROM debian:latest
 
-COPY main.sh /main.sh
+COPY main.sh /usr/local/bin
 
 RUN ls \
     && apt-get update \
