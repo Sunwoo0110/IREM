@@ -86,5 +86,5 @@ nodemon: v2.0.18
 The scripts and documentation in this project are released under the [MIT License](LICENSE).
 
 ## Contributors
-- 소프트웨어학과 김선우(Sunwoo0110) sunkim09@g.skku.edu
-- 소프트웨어학과 유지훈(jihooni0914) jihooni0914@gmail.com
+- Sungkyunkwan Univ CSE Sunwoo Kim 김선우 (Sunwoo0110) sunkim09@g.skku.edu
+- Sungkyunkwan Univ CSE Jihoon Yu 유지훈 (jihooni0914) jihooni0914@gmail.com
