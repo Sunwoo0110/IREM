@@ -62,10 +62,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Git clone test
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - run: ls
       - name: Setup Repository
-        uses: actions/IREM@v1.0.1
+        uses: Sunwoo0110/IREM@v1.2.0
         with:
           github-repo-url: ${{ inputs.github-repo-url }}
           github-user-id: ${{ inputs.github-user-id }}
