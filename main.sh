@@ -9,6 +9,8 @@ echo "username: $2"
 echo "useremail: $3"
 echo "usertoken: ${GH_TOKEN}"
 
+echo "$@ $#"
+
 token=${GH_TOKEN}
 echo "usertoken_2: $token"
 

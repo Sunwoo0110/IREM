@@ -31,6 +31,7 @@ runs:
       - ${{ inputs.github-user-email }}
       - ${{ inputs.github-user-password }}
       # - ${{ inputs.GH_TOKEN }}
+   env:
       - ${{ secrets.GITHUB-TOKEN }}
 branding:
    icon: "navigation"
