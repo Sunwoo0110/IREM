@@ -1,8 +1,7 @@
 #!/bin/bash
 
 ## make app.js
-cd $1
-APP=src/app.js
+APP=../workspace/$1/src/app.js
 app_script=$(cat <<EOF
 const express = require("express");
 
