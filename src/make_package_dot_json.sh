@@ -3,7 +3,7 @@
 ## make package.json file
 cd ..
 ls
-cd $1
+cd "\$1"
 FILE=package.json
 script=$(cat <<EOF
 {
