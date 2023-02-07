@@ -18,10 +18,10 @@ inputs:
       description: "user password"
       required: true
       default: ''
-   GH_TOKEN: 
-      description: "user token"
-      required: true
-      default: ''
+   # GH_TOKEN: 
+   #    description: "user token"
+   #    required: true
+   #    default: ''
 runs:
    using: "docker"
    image: "Dockerfile"
@@ -30,8 +30,8 @@ runs:
       - ${{ inputs.github-user-id }}
       - ${{ inputs.github-user-email }}
       - ${{ inputs.github-user-password }}
-      - ${{ inputs.GH_TOKEN }}
-      # - ${{ secrets.GITHUB-TOKEN }}
+      # - ${{ inputs.GH_TOKEN }}
+      - ${{ secrets.GITHUB-TOKEN }}
 branding:
    icon: "navigation"
    color: "blue"
