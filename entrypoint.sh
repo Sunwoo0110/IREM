@@ -9,6 +9,8 @@ echo "$repo_name"
 ls
 git clone https://$2:$4@github.com/$2/$repo_name.git
 
+cd $repo_name
+
 ## make src directory
 mkdir -p $repo_name/src
 
@@ -88,6 +90,8 @@ fi
 touch $SERVER
 
 echo "$server_script" >> $SERVER
+
+echo "hi" >> README.md
 
 git config --global user.name $2
 git config --global user.name 
