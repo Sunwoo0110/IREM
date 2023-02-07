@@ -1,9 +1,9 @@
 FROM debian:latest
 
-COPY . .
+COPY main.sh /main.sh
 
 RUN ls \
     && apt-get update \
     && apt-get install -y git
 
-ENTRYPOINT [ "./main.sh" ]
+ENTRYPOINT [ "/main.sh" ]
