@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 repo_url=$1
 repo_name=`echo \$repo_url | cut -d '/' -f5`
 repo_name=`echo \$repo_name | cut -d '.' -f1`
@@ -8,34 +9,85 @@ echo "$repo_name"
 ls
 git clone https://$2:$4@github.com/$2/$repo_name.git
 
-# ls
-# cd ..
-# # cd $repo_name
-# ls
-# cd workflow
-# ls
-# chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_config.sh make_routes.sh make_env_sample.sh make_gitignore.sh
-# ./make_package_dot_json.sh $repo_name $repo_url
-# ./make_src_directory.sh $repo_name
-# ./make_appserver.sh $repo_name
-# ./make_config.sh $repo_name
-# ./make_routes.sh $repo_name
-# ./make_env_sample.sh $repo_name
-# ./make_gitignore.sh $repo_name
+## make src directory
+mkdir -p $repo_name/src
 
-# cd ..
-# cd workspace
-# ls
-chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_config.sh make_routes.sh make_env_sample.sh make_gitignore.sh
-./make_package_dot_json.sh $repo_name $repo_url
-./make_src_directory.sh $repo_name
-./make_appserver.sh $repo_name
-./make_config.sh $repo_name
-./make_routes.sh $repo_name
-./make_env_sample.sh $repo_name
-./make_gitignore.sh $repo_name
+## make config, routes directory
+mkdir -p $repo_name/src/config
+mkdir -p $repo_name/src/routes
 
-# cd $repo_name
+
+## make app.js
+APP=$repo_name/src/app.js
+app_script=$(cat <<EOF
+const express = require("express");
+class App {
+    constructor() {
+        
+        this.app = express();
+        this.middleware();
+        /* body parsing */
+        this.bodyParsing();
+        /* router */
+        this.getRouting();
+        /* 404 error */
+        this.status404();
+        /* error handling */
+        this.errorHandler();
+    }
+    middleware() {
+        /* Add your middleware */
+    }
+    
+    bodyParsing() {
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({ extended: true }));
+    }
+    getRouting() {
+        this.app.use(require("./routes"));
+    }
+    status404() {
+        this.app.use((req, res, _) => {
+            res.status(404).send("Error Code 400");
+        });
+    }
+    errorHandler() {
+        this.app.use((errreq, res, _) => {
+            res.status(500).send("Error Code 400");
+        });
+    }
+}
+module.exports = new App().app;
+EOF
+)
+
+if [[ -f "$APP" ]]; then
+    rm $APP
+fi
+
+touch $APP
+
+echo "$app_script" >> $APP
+
+## make server.js
+SERVER=src/server.js
+server_script=$(cat <<EOF
+const app = require("./app.js");
+const port = 3000;
+const server = app.listen(port, () => {
+    console.log('[server] Express listening on port:3000');
+    console.log('[baseURL] http://localhost:3000');
+});
+EOF
+)
+
+if [[ -f "$SERVER" ]]; then
+    rm $SERVER
+fi
+
+touch $SERVER
+
+echo "$server_script" >> $SERVER
 
 git config --global user.name $2
 git config --global user.name 
