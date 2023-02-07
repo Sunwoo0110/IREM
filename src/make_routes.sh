@@ -1,8 +1,7 @@
 #!/bin/bash
 
 ## make routes/db.js
-cd ..
-cd "\$1"
+cd $1
 DB=src/routes/db.js
 db_script=$(cat <<EOF
 const dotenv = require("dotenv");
