@@ -25,6 +25,7 @@ git clone https://$2:$4@github.com/$2/$repo_name.git
 
 cd ..
 ls
+cd src
 chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_config.sh make_routes.sh make_env_sample.sh make_gitignore.sh
 ./make_package_dot_json.sh $repo_name $repo_url
 ./make_src_directory.sh $repo_name
