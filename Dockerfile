@@ -17,4 +17,5 @@ COPY src/make_src_directory.sh /workspace/make_src_directory.sh
 
 RUN ls
 
-ENTRYPOINT [ "/entrypoint.sh" ]
+# ENTRYPOINT [ "/entrypoint.sh" ]
+ENTRYPOINT [ "./main.sh" ]
