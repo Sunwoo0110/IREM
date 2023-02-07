@@ -41,7 +41,11 @@ cd ..
 ls
 cd ..
 ls
-cd workspace
+cd ..
+ls
+cd ..
+ls
+cd github
 ls
 
 git config --global user.name $2
