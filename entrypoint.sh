@@ -37,7 +37,7 @@ chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_c
 ./make_gitignore.sh $repo_name
 
 cd ..
-cd $repo_name
+cd workspace/$repo_name
 
 # cd ..
 # ls
