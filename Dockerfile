@@ -1,10 +1,9 @@
-FROM ubuntu:latest
+FROM debian:latest
 
 COPY ./main.sh /
 
-RUN sed -i 's/archive.ubuntu.com/kr.archive.ubuntu.com/g' /etc/apt/sources.list && \
-    apt-get update && \
-    apt-get install -y git && \
-    rm -rf /var/lib/apt/lists/*
-    
-ENTRYPOINT [ "/main.sh" ]
+RUN apt-get install -y apt-transport-https \
+    && apt-get update \
+    && apt-get install -y git
+
+ENTRYPOINT [ "./main.sh" ]

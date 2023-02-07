@@ -1,4 +1,4 @@
-name: Git clone test-0206
+name: Git clone test-0207
 
 on: [push]
 
@@ -11,11 +11,11 @@ jobs:
            uses: actions/checkout@v3
          - name: Setup
            with:
-              github-repo-url: "https://github.com/jihooni0914/my-first-repo.git"
-              github-user-id: "jihooni0914"
-              github-user-email: "jihooni0914@gmail.com"
+              github-repo-url: "https://github.com/Sunwoo0110/Node_gitaction_test"
+              github-user-id: "Sunwoo0110"
+              github-user-email: "Sunwoo0110@g.skku.edu"
               github-user-password: "1234"
-              GH_TOKEN: "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"
+              GH_TOKEN: "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"
               # GH_TOKEN: ${{ secrets.GH_TOKEN }}
            uses: ./ 
            
