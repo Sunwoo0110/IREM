@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## make env.sample
-ENVSAMPLE=../workspace/$1/.env.sample
+ENVSAMPLE=$1/.env.sample
 envsample_script=$(cat <<EOF
 /* .env file example */
 MYSQL_HOST = "Your Host"
