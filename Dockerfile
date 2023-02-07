@@ -14,7 +14,7 @@ COPY entrypoint.sh /entrypoint.sh
 # COPY src/make_routes.sh /home/make_routes.sh
 # COPY src/make_src_directory.sh /home/make_src_directory.sh
 # COPY . .
-COPY src /github/workspace/src/
+COPY src src/
 
 RUN ls
 
