@@ -3,11 +3,15 @@ author: "<Sunwoo0110@gmail.com> && <jihooni0914@gmail.com>"
 description: "A GitHub Action to setup Node.js Express and MySQL"
 inputs:
    github-repo-url:
-      description: "project github repository url"
+      description: "project github repository url which you want to setup"
       required: true
       default: ''
    github-user-id: 
       description: "user id"
+      required: true
+      default: ''
+   github-user-email: 
+      description: "user email"
       required: true
       default: ''
    gh-token: 
@@ -20,6 +24,7 @@ runs:
    args:
       - ${{ inputs.github-repo-url }}
       - ${{ inputs.github-user-id }}
+      - ${{ inputs.github-user-email }}
       - ${{ inputs.gh-token }}
 branding:
    icon: "navigation"

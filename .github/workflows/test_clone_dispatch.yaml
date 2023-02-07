@@ -23,6 +23,7 @@ jobs:
         with:
           github-repo-url: ${{ inputs.github-repo-url }}
           github-user-id: ${{ inputs.github-user-id }}
+          github-user-email: ${{ inputs.github-user-email }}
           gh-token: ${{ secrets.GH_TOKEN }}
         uses: ./ 
       - name: Test finish

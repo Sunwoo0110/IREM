@@ -13,6 +13,7 @@ jobs:
            with:
               github-repo-url: "https://github.com/jihooni0914/my-first-repo.git"
               github-user-id: "jihooni0914"
+              github-user-email: "jihooni0914@gmail.com"
               gh-token: ${{ secrets.GH_TOKEN }}
            uses: ./ 
          - name: 

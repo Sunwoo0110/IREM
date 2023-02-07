@@ -17,12 +17,10 @@ cd ../$repo_name
 ../src/make_routes.sh
 ls
 
-# git config --global user.name $2
-# git config --global user.name 
-# git config --global user.email $3
-# git config --global user.email
-# git config --global user.password $5
-# git config --global user.password
+git config --global user.name $2
+git config --global user.name 
+git config --global user.email $3
+git config --global user.email
 
 git add .
 git commit -m "init"
