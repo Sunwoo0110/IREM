@@ -1,5 +1,6 @@
 # **IREM** : **I**nitialize **R**epository file structure for Node.js **E**xpress and **M**ySQL
 
+
 This action provides the following functionality for GitHub Actions users:
 - Initializing your repository file structure for Node.js Express and MySQL
 - Automatically detecting .env file and setting it accordingly **(Not implemented yet)**
@@ -72,15 +73,62 @@ jobs:
           github-token: ${{ secrets.GH_TOKEN }}
 ```
 
-## File Structure
-
-
 ## Usage Scenario
 1. Make repository on your github
 2. Write and add a workflow file to ./github/workflows/ . See Example.
 3. Trigger the action according to the format you created.
 4. Check if it works well on the action tap and your repository.
 
+## Expected Completed File Structure After Action
+```bash
+* 📦 [Your Repo]
+  ├──  package.json
+  ├──  .env.sample
+  ├──  src
+  │   ├──  config
+  │   │   └──  config.js
+  │   ├──  routes
+  │   │   ├──  test
+  │   │   │   ├──  test.ctrl.js
+  │   │   │   └──  index.js
+  │   │   ├──  db.js
+  │   │   └──  index.js
+  │   ├──  app.js
+  │   └──  server.js
+  └──  .gitignore
+```
+
+## Default Dependencies
+```yaml
+body-parser: v1.20.0
+dotenv: v16.0.1
+express: v4.18.1
+mysql2: v2.3.3
+nodemon: v2.0.18
+```
+
+## File Structure
+```bash
+* 📦 IREM
+  ├──  .github
+  │   ├──  workflows
+  │   │   └──  test_clone_dispatch.yml
+  ├──  src
+  │   ├──  make_appserver.sh
+  │   ├──  make_config.sh
+  │   ├──  make_env_sample.sh
+  │   ├──  make_gitignore.sh
+  │   ├──  make_package_dot_json.sh
+  │   ├──  make_routes.sh
+  │   └──  make_src_directory.sh
+  ├──  Dockerfile
+  ├──  action.yml
+  └──  main.sh
+```
 
 ## License
 The scripts and documentation in this project are released under the [MIT License](LICENSE).
+
+## Contributors
+- Sungkyunkwan Univ CSE Sunwoo Kim 김선우 (Sunwoo0110) sunkim09@g.skku.edu
+- Sungkyunkwan Univ CSE Jihoon Yu 유지훈 (jihooni0914) jihooni0914@gmail.com

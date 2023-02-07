@@ -1,8 +1,9 @@
 FROM debian:latest
 
+RUN ls \
+    && apt-get update \
+    && apt-get install -y git
+    
 COPY . .
 
-RUN apt-get update \
-    && apt-get install -y git
-
-ENTRYPOINT [ "./main.sh" ]
+ENTRYPOINT [ "/entrypoint.sh" ]
