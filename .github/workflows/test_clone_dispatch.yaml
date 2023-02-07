@@ -8,8 +8,11 @@ on:
         required: true
         default: ''
       github-user-id: 
-        description: "project name"
+        description: "user id"
         required: true
+        default: ''
+      github-user-email:
+        description: "user email"
         default: ''
 
 jobs:
