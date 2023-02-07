@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## make package.json file
-
+cd ..
 FILE=$1/package.json
 script=$(cat <<EOF
 {
