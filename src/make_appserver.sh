@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## make app.js
-APP=src/app.js
+APP=../workspace/$1/src/app.js
 app_script=$(cat <<EOF
 const express = require("express");
 
@@ -64,7 +64,7 @@ touch $APP
 echo "$app_script" >> $APP
 
 ## make server.js
-SERVER=src/server.js
+SERVER=../workspace/$1/src/server.js
 server_script=$(cat <<EOF
 const app = require("./app.js");
 const port = 3000;
