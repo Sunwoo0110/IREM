@@ -7,9 +7,9 @@ echo "repo name: $repo_name"
 echo "repo url: $repo_url"
 echo "username: $2"
 echo "useremail: $3"
-echo "usertoken: $5"
+echo "usertoken: ${GH_TOKEN}"
 
-token=$5
+token=${GH_TOKEN}
 echo "usertoken_2: $token"
 
 git config --global user.name $2
@@ -19,9 +19,9 @@ git config --global user.email
 git config --global user.password $5
 git config --global user.password
 
-echo "git url: https://$2:$5@github.com/$2/$repo_name.git"
+echo "git url: https://$2:${GH_TOKEN}@github.com/$2/$repo_name.git"
 
-git clone https://$2:$5@github.com/$2/$repo_name.git
+git clone https://$2:${GH_TOKEN}@github.com/$2/$repo_name.git
 # git clone $repo_url
 
 chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_config.sh make_routes.sh
