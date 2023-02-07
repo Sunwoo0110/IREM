@@ -13,6 +13,7 @@ on:
         default: ''
       github-user-email:
         description: "GitHub User Email"
+        required: true
         default: ''
 
 jobs:
