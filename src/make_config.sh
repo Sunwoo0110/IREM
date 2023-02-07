@@ -2,7 +2,7 @@
 
 ## make config/config.js
 cd ..
-cd "\s1"
+cd "\$1"
 CONFIG=src/config/config.js
 config_script=$(cat <<EOF
 require("dotenv").config();
