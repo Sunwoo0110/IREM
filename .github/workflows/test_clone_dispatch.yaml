@@ -1,14 +1,18 @@
-name: Git clone test2
+name: Setup Nodejs Express && MySQL Directory Structure
 
 on:
   workflow_dispatch:
     inputs:
       github-repo-url:
-        description: "project github repogitory url"
+        description: "GitHub Repository URL which you want to Setup"
         required: true
         default: ''
       github-user-id: 
-        description: "project name"
+        description: "GitHub User ID"
+        required: true
+        default: ''
+      github-user-email:
+        description: "GitHub User Email"
         required: true
         default: ''
 
@@ -24,7 +28,7 @@ jobs:
           github-repo-url: ${{ inputs.github-repo-url }}
           github-user-id: ${{ inputs.github-user-id }}
           github-user-email: ${{ inputs.github-user-email }}
-          gh-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         uses: ./ 
       - name: Test finish
         run: echo "test was good"
