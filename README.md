@@ -79,6 +79,13 @@ jobs:
 3. Trigger the action according to the format you created.
 4. Check if it works well on the action tap and your repository.
 
+## After action executed
+1. Clone your repository and pull to local directory
+2. Create your env file about mysql. See env.sample file.
+3. Type npm install, then node_nodules and package-lock.json will created.
+4. If you want to start server, type npm start.
+4. To make api, add file to src/routes and router to src/index.js. See test code.
+
 ## Expected Completed File Structure After Action
 ```bash
 * 📦 [Your Repo]
