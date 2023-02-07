@@ -16,12 +16,12 @@ cd src
 chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_config.sh make_routes.sh make_env_sample.sh make_gitignore.sh
 cd ../$repo_name
 ../src/make_package_dot_json.sh $repo_name $repo_url
-../src/make_src_directory.sh
-../src/make_appserver.sh
-../src/make_config.sh
-../src/make_routes.sh
-../src/make_env_sample.sh
-../src/make_gitignore.sh
+../src/make_src_directory.sh $repo_name
+../src/make_appserver.sh $repo_name
+../src/make_config.sh $repo_name
+../src/make_routes.sh $repo_name
+../src/make_env_sample.sh $repo_name
+../src/make_gitignore.sh $repo_name
 ls
 
 git config --global user.name $2
