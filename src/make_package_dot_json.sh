@@ -5,23 +5,23 @@
 FILE=$1/package.json
 script=$(cat <<EOF
 {
-    "name": "\$1",
+    "name": "$1",
     "version": "1.0.0",
-    "description": "\$1",
+    "description": "$1",
     "main": "index.js",
     "scripts": {
         "start": "nodemon --watch src/ src/server.js"
     },
     "repository": {
         "type": "git",
-        "url": "git+\$2"
+        "url": "git+$2"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "\$2/issues"
+        "url": "$2/issues"
     },
-    "homepage": "\$2#readme",
+    "homepage": "$2#readme",
     "dependencies": {
         "body-parser": "^1.20.0",
         "dotenv": "^16.0.1",
