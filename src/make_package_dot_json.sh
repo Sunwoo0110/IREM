@@ -2,6 +2,8 @@
 
 ## make package.json file
 ls
+cd ..
+ls
 cd $1
 FILE=package.json
 script=$(cat <<EOF
