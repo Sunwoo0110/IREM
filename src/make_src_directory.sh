@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ## make src directory
-mkdir -p src
+mkdir -p $1/src
 
 ## make config, routes directory
-mkdir -p src/config
-mkdir -p src/routes
+mkdir -p $1/src/config
+mkdir -p $1/src/routes
