@@ -5,6 +5,12 @@ repo_name=`echo \$repo_url | cut -d '/' -f5`
 repo_name=`echo \$repo_name | cut -d '.' -f1`
 echo "repo name: $repo_name"
 echo "repo url: $repo_url"
+echo "username: $2"
+echo "useremail: $3"
+echo "usertoken: $5"
+
+token=$5
+echo "usertoken_2: $token"
 
 git config --global user.name $2
 git config --global user.name 
@@ -12,6 +18,8 @@ git config --global user.email $3
 git config --global user.email
 git config --global user.password $5
 git config --global user.password
+
+echo "git url: https://$2:$5@github.com/$2/$repo_name.git"
 
 git clone https://$2:$5@github.com/$2/$repo_name.git
 # git clone $repo_url
