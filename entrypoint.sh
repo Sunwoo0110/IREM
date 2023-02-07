@@ -5,7 +5,7 @@ repo_name=`echo \$repo_url | cut -d '/' -f5`
 repo_name=`echo \$repo_name | cut -d '.' -f1`
 echo "$repo_name"
 
-git clone https://$2:$3@github.com/$2/$repo_name.git
+git clone https://$2:$4@github.com/$2/$repo_name.git
 
 cd src
 chmod +x make_package_dot_json.sh make_src_directory.sh make_appserver.sh make_config.sh make_routes.sh make_env_sample.sh make_gitignore.sh
