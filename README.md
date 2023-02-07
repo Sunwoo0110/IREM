@@ -35,7 +35,29 @@ steps:
 
 ## Usage Scenario
 
+## Expected Completed File Structure After Action
+```bash
+* 📦 [Your Repo]
+  ├──  package.json
+  ├──  .env.sample
+  ├──  src
+  │   ├──  config
+  │   │   └──  config.js
+  │   ├──  routes
+  │   │   ├──  test
+  │   │   │   └──  test.ctrl.js
+  │   │   ├──  db.js
+  │   │   └──  index.js
+  │   ├──  app.js
+  │   └──  server.js
+  └──  .gitignore
+```
+
 ## File Structure
 
 ## License
 The scripts and documentation in this project are released under the [MIT License](LICENSE).
+
+## Contributors
+- 소프트웨어학과 김선우(Sunwoo0110) sunkim09@g.skku.edu
+- 소프트웨어학과 유지훈(jihooni0914) jihooni0914@gmail.com
