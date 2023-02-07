@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## make package.json file
-FILE=../workspace/$1/package.json
+FILE=$1/package.json
 script=$(cat <<EOF
 {
     "name": "$1",
