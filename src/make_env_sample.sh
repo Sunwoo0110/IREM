@@ -1,8 +1,7 @@
 #!/bin/bash
 
 ## make env.sample
-cd ..
-cd "\$1"
+cd $1
 ENVSAMPLE=.env.sample
 envsample_script=$(cat <<EOF
 /* .env file example */
