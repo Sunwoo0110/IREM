@@ -4,5 +4,5 @@
 mkdir -p ../workspace/$1/src
 
 ## make config, routes directory
-mkdir -p ../workspace/$1/src/config
-mkdir -p ../workspace/$1/src/routes
+mkdir -p $1/src/config
+mkdir -p $1/src/routes

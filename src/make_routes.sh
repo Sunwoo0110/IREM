@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## make routes/db.js
-DB=../workspace/$1/src/routes/db.js
+DB=$1/src/routes/db.js
 db_script=$(cat <<EOF
 const dotenv = require("dotenv");
 const config = require('../config/config');
@@ -31,7 +31,7 @@ touch $DB
 echo "$db_script" >> $DB
 
 ## make routes/index.js
-ROUTES=../workspace/$1/src/routes/index.js
+ROUTES=$1/src/routes/index.js
 routes_script=$(cat <<EOF
 const router = require("express").Router();
 
@@ -50,10 +50,10 @@ touch $ROUTES
 echo "$routes_script" >> $ROUTES
 
 ## make routes/test directory
-mkdir -p src/routes/test
+mkdir -p $1/src/routes/test
 
 ## make routes/test/test.ctrl.js
-CTRL=src/routes/test/test.ctrl.js
+CTRL=$1/src/routes/test/test.ctrl.js
 ctrl_script=$(cat <<EOF
 /* Test API file */
 
@@ -80,7 +80,7 @@ touch $CTRL
 echo "$ctrl_script" >> $CTRL
 
 ## make routes/test/index.js
-TEST=../workspace/$1/src/routes/test/index.js
+TEST=$1/src/routes/test/index.js
 test_script=$(cat <<EOF
 /* Test APIs */
 const router = require("express").Router();
