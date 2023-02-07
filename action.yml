@@ -10,16 +10,8 @@ inputs:
       description: "user id"
       required: true
       default: ''
-   github-user-email: 
-      description: "user email"
-      required: true
-      default: ''
-   github-user-password: 
-      description: "user password"
-      required: true
-      default: ''
-   GH_TOKEN: 
-      description: "user token"
+   gh-token: 
+      description: "user PAT"
       required: true
       default: ''
 runs:
@@ -28,10 +20,7 @@ runs:
    args:
       - ${{ inputs.github-repo-url }}
       - ${{ inputs.github-user-id }}
-      - ${{ inputs.github-user-email }}
-      - ${{ inputs.github-user-password }}
-      - ${{ inputs.GH_TOKEN }}
-      # - ${{ secrets.GITHUB-TOKEN }}
+      - ${{ inputs.gh-token }}
 branding:
    icon: "navigation"
    color: "blue"

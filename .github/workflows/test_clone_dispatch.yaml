@@ -11,11 +11,6 @@ on:
         description: "project name"
         required: true
         default: ''
-      github-user-password: 
-        description: "project name"
-        required: true
-        default: ''
-
 
 jobs:
    git_clone_test:
@@ -24,14 +19,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: node setup
-        uses: actions/setup-node@v3
-      - name: Setup
+      - name: Setup Repository
         with:
           github-repo-url: ${{ inputs.github-repo-url }}
           github-user-id: ${{ inputs.github-user-id }}
-          github-user-email: "${{ inputs.github-user-id }}@gmail.com"
-          github-user-password: ${{ github-user-password }}
+          gh-token: ${{ secrets.GH_TOKEN }}
         uses: ./ 
       - name: Test finish
         run: echo "test was good"
