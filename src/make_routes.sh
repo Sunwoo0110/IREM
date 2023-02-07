@@ -31,7 +31,7 @@ touch $DB
 echo "$db_script" >> $DB
 
 ## make routes/index.js
-ROUTES=src/routes/index.js
+ROUTES=$1/src/routes/index.js
 routes_script=$(cat <<EOF
 const router = require("express").Router();
 
@@ -53,7 +53,7 @@ echo "$routes_script" >> $ROUTES
 mkdir -p src/routes/test
 
 ## make routes/test/test.ctrl.js
-CTRL=src/routes/test/test.ctrl.js
+CTRL=$1/src/routes/test/test.ctrl.js
 ctrl_script=$(cat <<EOF
 /* Test API file */
 
@@ -80,7 +80,7 @@ touch $CTRL
 echo "$ctrl_script" >> $CTRL
 
 ## make routes/test/index.js
-TEST=src/routes/test/index.js
+TEST=$1/src/routes/test/index.js
 test_script=$(cat <<EOF
 /* Test APIs */
 const router = require("express").Router();
