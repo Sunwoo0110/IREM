@@ -4,6 +4,7 @@ RUN ls \
     && apt-get update \
     && apt-get install -y git
     
-COPY . .
+COPY entrypoint.sh /entrypoint
+COPY src src 
 
-ENTRYPOINT [ "./entrypoint.sh" ]
+ENTRYPOINT [ "/entrypoint.sh" ]
