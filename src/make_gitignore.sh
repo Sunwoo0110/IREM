@@ -1,8 +1,7 @@
 #!/bin/bash
 
 ## make env.sample
-cd $1
-GITIGNORE=.gitignore
+GITIGNORE=../workspace/$1/.gitignore
 gitignore_script=$(cat <<EOF
 # Created by https://www.toptal.com/developers/gitignore/api/node
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
