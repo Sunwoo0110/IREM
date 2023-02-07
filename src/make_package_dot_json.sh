@@ -1,10 +1,6 @@
 #!/bin/bash
 
 ## make package.json file
-# ls
-# cd ..
-# ls
-# cd workspace/$1
 FILE=../workspace/$1/package.json
 script=$(cat <<EOF
 {
