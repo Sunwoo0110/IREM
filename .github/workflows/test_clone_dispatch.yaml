@@ -4,15 +4,15 @@ on:
   workflow_dispatch:
     inputs:
       github-repo-url:
-        description: "project github repogitory url"
+        description: "GitHub Repository URL which you want to Setup"
         required: true
         default: ''
       github-user-id: 
-        description: "user id"
+        description: "GitHub User ID"
         required: true
         default: ''
       github-user-email:
-        description: "user email"
+        description: "GitHub User Email"
         default: ''
 
 jobs:
